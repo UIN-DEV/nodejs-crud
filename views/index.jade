@@ -1,5 +1,29 @@
-extends layout
+doctype 5
+html
+  head
+    title
+      | .:: Tambah Biodata ::.
+   link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    form#formtambah.rounded(method='post', action='')
+      h3 Tambah Biodata Pengguna
+      .field
+        label(for='name') Name:
+        input#name.input(type='text', name='name',required='required')
+        p.hint Inputkan Nama Anda.
 
-block content
-  h1= title
-  p Welcome to #{title}
+       .field
+        label(for='hp') No.Hp:
+        input#hp.input(type='text', name='hp',required='required')
+        p.hint Inputkan No. Hp
+
+      .field
+        label(for='email') Email:
+        input#email.input(type='email', name='email',required='required')
+        p.hint Inputkan Email Anda.
+
+      .field
+        label(for='alamat') Alamat:
+        textarea#alamat.input.textarea(name='alamat',required='required')
+        p.hint Inputkan Alamat Anda.
+      input.button(type='submit', name='Submit', value='Submit')
